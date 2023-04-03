@@ -2,47 +2,42 @@ package com.entireAcademy.Day2.dataTypes;
 
 public class Day2ClassNote {
     public static void main(String[] args) {
-//        byte num = 20;
-//        int wholeNumber = 200000;
-//        double decimal = 1.2323232322323232323;
-//        float fDecimal = 1.34f;
-//        char c = 'A';
-//        short shrt = 12121;
-//        long lng = 232537523752372537L;
-//        boolean isTall = false;
+////        byte num = 128;
+////        long distance = 150000000000L;
+////        float pi = 3.14f;
+//        double heightInMeter = 1.85;
+//        boolean isTall = true;
+//        boolean isGoing = false;
+//        String letter = "W";
 
-        // comment
-        double a =  100.12;
-        int b = 21;
-//        // 21 * 4 = 84
-//        // 100 - 84 = 16;
-//        int add = a + b;
-//        int subtract = a - b;
-//        int multiplication = a * b;
-//        int division = a / b;
-//        int modulo = a % b;
+//        int numA = 6;
+//        int numB = 47;
+//        int add = numA + numB;
+//        int subtract = numB - numA;
+//        int multiplication = numB * numA;
+//        double division = numB / numA;
+//        int modulo = numB % numA;
+        /*
+            22 / 10 = 2.2
+            10 * 2 = 20;
+            22 - 20 =  2;
+            47 % 6 = 5
+            6 * 7 = 42
+            47 -  42 = 5;
+         */
+//        System.out.println(modulo);
+//        String name = "SUMAN";
+//        int nameLength = name.length();
+//        int index = name.indexOf('Z');
+//        String upperCase = name.toUpperCase();
+//        String lowerCase = name.toLowerCase();
+//        System.out.println(lowerCase);
 
-//        int findNearestNumber = (int) (a / b);
-
-        String message = "Hello, world!";
-
-//        String firstName = "John";
-//        String lastName = "Doe";
-//        String fullName = firstName + " " + lastName;
-
-        // Retrieving the length of a string
-//        String word = "hello";
-//        int length = word.length(); // length = 5
-//
-//
-
-        // Checking if a string contains a certain substring
-//        boolean contains = message.contains("world"); // contains = true
-
-//        String replaced = message.replace("world", "Java");
-//        String sentence = "The quick brown fox";
-//        String[] words = sentence.split(" "); // words = ["The", "quick", "brown", "fox"]
-
-//        System.out.println(words);
+        String sentence = "My Name name is Suman";
+        boolean hasWord = sentence.toLowerCase().contains("name");
+        String newSentence = sentence.replace("name", "from");
+        System.out.println(newSentence);
     }
+
+
 }
