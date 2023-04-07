@@ -25,14 +25,13 @@ public class ExpressionExercise {
      monkeyTrouble(true, false) → false
      */
     public boolean monkeyTrouble(boolean aSmile, boolean bSmile) {
-//        if (aSmile && bSmile) {
-//            return true;
-//        } else if (!aSmile && !bSmile) {
-//            return true;
-//        } else {
-//            return false;
-//        }
-        return (aSmile && bSmile) || (!aSmile && !bSmile);
+        if (aSmile && bSmile) {
+            return true;
+        } else if (!aSmile && !bSmile) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     /*
@@ -42,8 +41,13 @@ public class ExpressionExercise {
      sumDouble(2, 2) → 8
      */
     public int sumDouble(int a, int b) {
-        return 0;
+        if (a == b) {
+            return 2 * (a + b);
+        }
+        else
+        return a + b;
     }
+
 
     /*
      4. Given an int n, return the absolute difference between n and 21, except return double the absolute
@@ -55,8 +59,12 @@ public class ExpressionExercise {
      diff21(-10) → 31
      */
     public int diff21(int n) {
-        return 0;
+        if (n - 21 > 0) {
+            return 2 * (n - 21);
+        } else
+            return Math.abs(n - 21);
     }
+
 
     /*
      5. We have a loud talking parrot. The "hour" parameter is the current hour time in the range 0..23.
@@ -67,7 +75,10 @@ public class ExpressionExercise {
      parrotTrouble(false, 6) → false
      */
     public boolean parrotTrouble(boolean talking, int hour) {
-        return false;
+        if (talking && (hour < 7 || hour > 20)) {
+            return true;
+        } else
+            return false;
     }
 
     /*
@@ -77,7 +88,13 @@ public class ExpressionExercise {
      makes10(1, 9) → true
      */
     public boolean makes10(int a, int b) {
-        return false;
+        if (a == 10 || b == 10) {
+            return true;
+        } else if (a + b == 10) {
+            return true;
+        }
+        else
+            return false;
     }
 
     /*
@@ -88,7 +105,11 @@ public class ExpressionExercise {
      posNeg(-4, -5, true) → true
      */
     public boolean posNeg(int a, int b, boolean negative) {
-        return false;
+        if ((a < 0 || b < 0) && negative) {
+            return true;
+        }
+        else
+            return false;
     }
 
     /*
@@ -99,6 +120,10 @@ public class ExpressionExercise {
      or35(8) → false
      */
     public boolean or35(int n) {
+        if ((n > 0) && ((n % 3 == 0) || (n % 5 == 0))) {
+            return true;
+        }
+        else
         return false;
     }
 
@@ -109,7 +134,13 @@ public class ExpressionExercise {
      icyHot(2, 120) → false
      */
     public boolean icyHot(int temp1, int temp2) {
-        return false;
+        if (temp1 < 0 && temp2 > 100) {
+            return  true;
+        }
+        else if (temp2 < 0 && temp1 > 100) {
+            return  true;
+        }
+         else return false;
     }
 
     /*
@@ -119,7 +150,11 @@ public class ExpressionExercise {
      in1020(8, 99) → false
      */
     public boolean in1020(int a, int b) {
-        return false;
+        if ((a >= 10 && a <= 20) || (b >= 10 && b <= 20) ) {
+            return  true;
+        }
+        else
+            return false;
     }
 
     /*
@@ -130,8 +165,13 @@ public class ExpressionExercise {
      hasTeen(20, 10, 13) → true
      */
     public boolean hasTeen(int a, int b, int c) {
-        return false;
+        if ((a >= 13 && a <= 19) || (b >= 13 && b <= 19) || (c >= 13 && c <= 19) ) {
+            return  true;
+        }
+        else
+            return false;
     }
+
 
     /*
      12. We'll say that a number is "teen" if it is in the range 13..19 inclusive. Given 2 int values,
@@ -141,8 +181,13 @@ public class ExpressionExercise {
      loneTeen(13, 13) → false
      */
     public boolean loneTeen(int a, int b) {
-        return false;
+        if ((a >= 13 && a <= 19) || (b >= 13 && b <= 19) ) {
+            return  true;
+        }
+        else
+            return false;
     }
+
 
     /*
      13. Given three int values, a b c, return the largest.
@@ -411,6 +456,7 @@ public class ExpressionExercise {
      luckySum(13, 13, 3) → 0
      */
     public int luckySum(int a, int b, int c) {
+
         return 0;
     }
 }
