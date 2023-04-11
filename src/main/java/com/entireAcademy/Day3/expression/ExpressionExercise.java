@@ -103,12 +103,14 @@ public class ExpressionExercise {
      posNeg(-4, -5, true) → true
      */
     public boolean posNeg(int a, int b, boolean negative) {
-        if ((a<0 && b<0)&& negative) {
+        if ((a < 0 && b > 0)  && !negative) {
             return true;
-        } else if ((a>0 && b<0) || (b>0 && a<0) && !negative)  {
+        } else if ((a > 0 && b < 0)  && !negative) {
+            return true;
+        } else if ((a > 0 && b > 0) && negative) {
             return true;
         } else
-            return false;
+        return false;
     }
 
     /*
@@ -463,13 +465,15 @@ public class ExpressionExercise {
      answerCell(true, false, false) → false
      */
     public boolean answerCell(boolean isMorning, boolean isMom, boolean isAsleep) {
-        if (isMorning && isMom && isAsleep) {
+        if (isAsleep) {
             return false;
-        } else if (!isMorning && isMom) {
+        } else if (isMorning && !isMom) {
+            return false;
+        } else
             return true;
-        }
-        return false;
+
     }
+
 
     /*
      30. We are having a party with amounts of tea and candy. Return the int outcome of the party encoded as
