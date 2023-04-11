@@ -196,6 +196,7 @@ public class ExpressionExercise {
      intMax(3, 2, 1) → 3
      */
     public int intMax(int a, int b, int c) {
+
         return 0;
     }
 
@@ -207,7 +208,14 @@ public class ExpressionExercise {
      in3050(40, 50) → true
      */
     public boolean in3050(int a, int b) {
-        return false;
+        if ((a >= 30 && a <= 40)  && (b >= 30 && b <= 40)) {
+            return  true;
+        }
+        else if ((a >= 40 && a <= 50)  && (b >= 40 && b <= 50))  {
+                return  true;
+        }
+        else
+            return false;
     }
 
     /*
@@ -218,6 +226,8 @@ public class ExpressionExercise {
      max1020(11, 9) → 11
      */
     public int max1020(int a, int b) {
+
+
         return 0;
     }
 
@@ -231,7 +241,11 @@ public class ExpressionExercise {
      cigarParty(70, true) → true
      */
     public boolean cigarParty(int cigars, boolean isWeekend) {
-        return false;
+        if ((cigars >= 40 && cigars <= 60)  || (isWeekend && cigars >= 40) ) {
+            return  true;
+        }
+         else
+             return false;
     }
 
     /*
@@ -258,6 +272,10 @@ public class ExpressionExercise {
      squirrelPlay(95, true) → true
      */
     public boolean squirrelPlay(int temp, boolean isSummer) {
+        if ((temp >= 60 && temp <= 90)  || (isSummer && (temp >= 60 && temp <= 100)) ) {
+            return  true;
+        }
+        else
         return false;
     }
 
@@ -271,7 +289,13 @@ public class ExpressionExercise {
      caughtSpeeding(65, true) → 0
      */
     public int caughtSpeeding(int speed, boolean isBirthday) {
-        return 0;
+        if (speed <= 60 || (isBirthday && speed <= 65)) {
+            return 0;
+        } else if ((speed >= 61 && speed <= 81) || (isBirthday && (speed >= 66) || speed <= 86) ) {
+            return 1;
+        } else   {
+            return 2;
+        }
     }
 
     /*
@@ -282,7 +306,10 @@ public class ExpressionExercise {
      sortaSum(10, 11) → 21
      */
     public int sortaSum(int a, int b) {
-        return 0;
+        if (a + b >= 10 && a + b <= 19) {
+            return 20;
+        }
+        return a + b;
     }
 
     /*
