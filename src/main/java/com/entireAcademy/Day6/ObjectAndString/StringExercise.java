@@ -31,7 +31,7 @@ public class StringExercise {
      makeTags("cite", "Yay") → "<cite>Yay</cite>"
      */
     public String makeTags(String tag, String word) {
-        return null;
+        return "<" + tag + ">" + word + "</" + tag+ ">" ;
     }
 
     /*
@@ -43,7 +43,7 @@ public class StringExercise {
      makeOutWord("[[]]", "word") → "[[word]]"
      */
     public String makeOutWord(String out, String word) {
-        return null;
+        return out.substring(0,2) + word + out.substring(2,4);
     }
 
     /*

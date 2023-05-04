@@ -37,7 +37,7 @@ public class ArrayAndLoopsExercise {
      makePi() → [3, 1, 4]
      */
     public int[] makePi() {
-        return new int[] {};
+        return new int[]{3, 1, 4};
     }
 
     /*
@@ -48,6 +48,9 @@ public class ArrayAndLoopsExercise {
      commonEnd([1, 2, 3], [1, 3]) → true
      */
     public boolean commonEnd(int[] a, int[] b) {
+        if (a[0] == b[0] || a[a.length - 1] == b[b.length - 1]) {
+            return true;
+        }
         return false;
     }
 
@@ -76,7 +79,7 @@ public class ArrayAndLoopsExercise {
 
         int temp = nums[0];
         for (int i = 0; i < nums.length - 1; i++) {
-            nums[i] = nums[i+1];
+            nums[i] = nums[i + 1];
         }
 
         nums[nums.length - 1] = temp;
@@ -91,7 +94,12 @@ public class ArrayAndLoopsExercise {
      reverse3([7, 0, 0]) → [0, 0, 7]
      */
     public int[] reverse3(int[] nums) {
-        return new int[] {};
+        int temp1 = nums[0];
+        for (int i = 0; i < nums.length - 1; i++) {
+            nums[0] = nums[2];
+        }
+        nums[nums.length - 1] = temp1;
+        return nums;
     }
 
     /*
@@ -102,7 +110,12 @@ public class ArrayAndLoopsExercise {
      maxEnd3([2, 11, 3]) → [3, 3, 3]
      */
     public int[] maxEnd3(int[] nums) {
-        return new int[] {};
+        if (nums[0] > nums.length - 1)
+            return new int[]{nums[0], nums[0], nums[0]};
+        else if (nums[0] <= nums.length - 1)
+            return new int[]{nums[2], nums[2], nums[2]};
+        else
+            return nums;
     }
 
     /*
@@ -113,8 +126,12 @@ public class ArrayAndLoopsExercise {
      sum2([1, 1, 1, 1]) → 2
      */
     public int sum2(int[] nums) {
-        return 0;
+        if (nums.length == 0)
+            return 0;
+        else
+            return (nums[0] + nums[1]);
     }
+
 
     /*
      10. Given 2 int arrays, a and b, each length 3, return a new array length 2 containing their middle
@@ -124,7 +141,7 @@ public class ArrayAndLoopsExercise {
      middleWay([5, 2, 9], [1, 4, 5]) → [2, 4]
      */
     public int[] middleWay(int[] a, int[] b) {
-        return new int[] {};
+        return new int[]{a[1], b[1]};
     }
 
     /*
@@ -135,7 +152,12 @@ public class ArrayAndLoopsExercise {
      countEvens([1, 3, 5]) → 0
      */
     public int countEvens(int[] nums) {
-        return 0;
+        int count = 0;
+        for (int i=0; i < nums.length; i++) {
+            if (nums[i] % 2 == 0)
+            count++;
+        }
+        return count;
     }
 
     /*
@@ -147,7 +169,14 @@ public class ArrayAndLoopsExercise {
      sum13([1, 2, 2, 1, 13]) → 6
      */
     public int sum13(int[] nums) {
-        return 0;
+        int sum = 0;
+        for (int i=0; i < nums.length; i++) {
+            if (nums[i] == 13 || i > 0 && nums[i-1] == 13)
+                break;
+            else
+                sum = sum + nums[i];
+        }
+        return sum;
     }
 
     /*
@@ -157,7 +186,13 @@ public class ArrayAndLoopsExercise {
      has22([2, 1, 2]) → false
      */
     public boolean has22(int[] nums) {
-        return false;
+        if (nums.length < 2)
+            return false;
+        for (int i = 0; i < nums.length - 1; i++) {
+            if (nums[i] == nums[i + 1])
+                return true;
+        }
+             return false;
     }
 
     /*
@@ -167,7 +202,11 @@ public class ArrayAndLoopsExercise {
      lucky13([1, 2, 4]) → false
      */
     public boolean lucky13(int[] nums) {
-        return false;
+        for (int i = 0; i < nums.length; i++ )
+            if (nums[i] == 1 || (nums[i] == 3) ) {
+                return false;
+        }
+        return true;
     }
 
     /*
@@ -177,6 +216,16 @@ public class ArrayAndLoopsExercise {
      sum28([1, 2, 3, 4]) → false
      */
     public boolean sum28(int[] nums) {
+        int count = 0;
+        for (int i = 0; i < nums.length; i++ )
+            if (nums[i] == 2) {
+                count ++;
+            }   if (count == 4)
+                        return true;
+            else
         return false;
     }
+
+
 }
+

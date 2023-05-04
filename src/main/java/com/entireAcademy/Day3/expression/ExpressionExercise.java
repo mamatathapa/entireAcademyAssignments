@@ -103,11 +103,11 @@ public class ExpressionExercise {
      posNeg(-4, -5, true) → true
      */
     public boolean posNeg(int a, int b, boolean negative) {
-        if ((a < 0 && b > 0)  && !negative) {
+        if ((a < 0 && b < 0) && negative) {
             return true;
         } else if ((a > 0 && b < 0)  && !negative) {
             return true;
-        } else if ((a > 0 && b > 0) && negative) {
+        } else if ((a < 0 && b > 0)  && !negative) {
             return true;
         } else
         return false;
@@ -311,13 +311,13 @@ public class ExpressionExercise {
      caughtSpeeding(65, true) → 0
      */
     public int caughtSpeeding(int speed, boolean isBirthday) {
-        if ((speed >=81) || (isBirthday && speed >=86) ) {
-            return 2;
-        } else if ((speed >=61)  || (isBirthday) && (speed >=66)) {
+        if ((speed < 61) || ((speed < 66) && isBirthday)) {
+            return 0;
+        } else if ((speed >=61) && (speed <=80) || (isBirthday) && (speed >=85)) {
             return 1;
         } else
-            return 0;
-    }
+            return 2;
+            }
 
     /*
      20. Given 2 ints, a and b, return their sum. However, sums in the range 10..19 inclusive, are forbidden,
